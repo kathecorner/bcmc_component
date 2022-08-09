@@ -145,7 +145,7 @@ curl_close($curl);
         locale: "en-US",
         showPayButton: true,
         environment: "test",
-        billingAddressRequired: true,//added on Aug30
+        billingAddressRequired: false,//added on Aug30
         hasHolderName: true,
         holderNameRequired: true,
         enableStoreDetails: true,
