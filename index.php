@@ -96,7 +96,7 @@ curl_close($curl);
           if(responseData.resultCode == "Authorised"){
               alert('PAYMENT SUCCESSFUL!');
               //window.location.href = 'http://127.0.0.1:8080/return.php';
-              window.location.href = 'http://127.0.0.1:8080/showResults.php';
+              window.location.href = '../showResults.php';
           }
       }
 
@@ -145,7 +145,7 @@ curl_close($curl);
         locale: "en-US",
         showPayButton: true,
         environment: "test",
-        billingAddressRequired: false,//added on Aug30
+        billingAddressRequired: true,//added on Aug30
         hasHolderName: true,
         holderNameRequired: true,
         enableStoreDetails: true,
@@ -191,7 +191,7 @@ curl_close($curl);
         },
         // Events
         onChange: function(state,component){
-            if(state.isValid){
+            /*if(state.isValid){
                 makePayment(state.data)
                     .then(response =>{
                         var responseData = response.action;
@@ -208,7 +208,7 @@ curl_close($curl);
                                 var responseDetails = response.action;
                                 //console.log(response.action);
                                 show3DSResult(response);
-                              })*/
+                              })
                         }
                         else{
                             showFinalResult(response);
@@ -218,7 +218,7 @@ curl_close($curl);
                         console.log(error);
                         //throw Error(error);
                     });
-            }
+            }*/
 
         },
 
