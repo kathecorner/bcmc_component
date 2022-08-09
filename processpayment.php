@@ -8,7 +8,7 @@ $payments_data = $_POST;
 
 $additional_data = [
     //'reference' => 'KenjiW001',
-    'reference' => 'playaround_11052021_2',
+    'reference' => 'playGround'.date("m/d/y"),
     'merchantAccount' => 'KenjiW',
     'amount' => [
         'value' => 1000,
