@@ -8,23 +8,23 @@ $payments_data = $_POST;
 
 $additional_data = [
     //'reference' => 'KenjiW001',
-    'reference' => 'playGround'.date("m/d/y"),
+    'reference' => 'playGround'.date( "m/d/y"),
     'merchantAccount' => 'KenjiW',
     'amount' => [
         'value' => 1000,
         'currency' => 'USD'
     ],
-    'returnUrl' => './return.php',
+    'returnUrl' => 'http://127.0.0.1:8080/return.php',
     'channel' => 'Web',
     'additionalData' => [
         'allow3DS2' => 'true'
     ],
     'origin' => 'http://127.0.0.1:8080',
     //'paymentMethod' => $payments_data->PaymentMethod,
-    'storePaymentMethod'=> true,
-    'shopperInteraction'=> 'Ecommerce',
-    'recurringProcessingModel'=> 'CardOnFile',
-    'shopperReference'=> 'Shopper_100'
+    //'storePaymentMethod'=> true,
+    //'shopperInteraction'=> 'Ecommerce',
+    //'recurringProcessingModel'=> 'CardOnFile',
+    //'shopperReference'=> 'Shopper_100'
 ];
 
 $final_payment_data = array_merge($payments_data, $additional_data);
